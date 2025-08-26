@@ -1,4 +1,4 @@
-package com.redix.testingapp.timer
+package com.awais.testingapp.timer
 
 class TickTimer:BaseTickTimerHelper() {
     fun start() {
@@ -27,3 +27,4 @@ class TickTimer:BaseTickTimerHelper() {
         trigertimer()
     }
 }
+

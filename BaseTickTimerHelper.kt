@@ -1,8 +1,7 @@
-package com.redix.testingapp.timer
+package com.awais.testingapp.timer
 
 import android.os.Handler
 import android.os.Looper
-import timber.log.Timber
 
 
 open class BaseTickTimerHelper {
@@ -14,7 +13,7 @@ open class BaseTickTimerHelper {
     private val handler = Handler(Looper.getMainLooper())
     private val runnable = object : Runnable {
         override fun run() {
-            Timber.d("asdasdadasd")
+            
             handler.postDelayed(this, 1000) // update every 1 second
             timerCallBack?.invoke(getFormattedTime())
         }
@@ -50,5 +49,6 @@ open class BaseTickTimerHelper {
         val hours = (millis / (1000 * 60 * 60))
         return String.format("%02d:%02d:%02d", hours, minutes, seconds)
     }
+
 
 }
